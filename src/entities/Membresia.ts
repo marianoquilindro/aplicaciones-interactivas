@@ -16,4 +16,4 @@ export class Membresia {
 
   @Column({ type: "datetime", default: () => "CURRENT_TIMESTAMP" })
   agregado_en!: string;
-}
+} 

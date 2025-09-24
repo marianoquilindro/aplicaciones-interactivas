@@ -1,0 +1,80 @@
+### Crear usuario
+POST http://localhost:3000/usuarios
+Content-Type: application/json
+
+{
+  "nombre": "Mariano",
+  "correo": "mariano@example.com"
+}
+
+###
+
+### Listar usuarios
+GET http://localhost:3000/usuarios
+
+###
+
+### Crear equipo (usa el id del usuario creado arriba)
+POST http://localhost:3000/equipos
+Content-Type: application/json
+
+{
+  "nombre": "Equipo Alpha",
+  "creado_por": 1
+}
+
+###
+
+### Listar equipos
+GET http://localhost:3000/equipos
+
+###
+
+### Crear tarea
+POST http://localhost:3000/tareas
+Content-Type: application/json
+
+{
+  "titulo": "Hacer el informe",
+  "descripcion": "Terminar el trabajo práctico",
+  "creador_id": 1,
+  "equipo_id": 1,
+  "fecha_vencimiento": "2025-09-30"
+}
+
+###
+
+### Listar tareas
+GET http://localhost:3000/tareas
+
+###
+
+### Editar tarea (id = 1)
+PUT http://localhost:3000/tareas/1
+Content-Type: application/json
+
+{
+  "titulo": "Hacer el informe actualizado",
+  "descripcion": "TP versión final",
+  "prioridad": 2
+}
+
+###
+
+### Cambiar estado de la tarea (PENDIENTE -> EN_PROGRESO)
+PATCH http://localhost:3000/tareas/1/estado
+Content-Type: application/json
+
+{
+  "nuevoEstado": "EN_PROGRESO"
+}
+
+###
+
+
+### Borrar tarea (id = 1)
+DELETE http://localhost:3000/tareas/1
+
+###
+
+
