@@ -22,6 +22,7 @@ tpo-primer-entrega/
 │ ├── entities/ # Entidades principales (Usuario, Equipo, Membresia, Tarea, Etiqueta, Actividad)
 │ ├── migrations/ # Migraciones iniciales de la base de datos
 │ ├── data-source.ts # Configuración de la conexión con SQLite
+│ ├── routes/ # Definición de rutas de la API
 │ └── ...
 ├── db.sqlite # Base de datos SQLite (se crea tras migraciones)
 ├── package.json # Scripts y dependencias
